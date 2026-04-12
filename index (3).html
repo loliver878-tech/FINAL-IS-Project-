@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Luke Oliver | Pre-Business Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"/>
+  <style>
+    :root {
+      --gold: #C8A84B;
+      --dark: #0f1923;
+      --mid: #1c2b3a;
+      --light: #f4f1eb;
+    }
+    body { font-family: 'Inter', sans-serif; background: var(--light); color: var(--dark); }
+    .navbar { background: var(--dark) !important; }
+    .navbar-brand { font-family: 'Playfair Display', serif; color: var(--gold) !important; font-size: 1.5rem; }
+    .nav-link { color: #ccc !important; }
+    .nav-link:hover { color: var(--gold) !important; }
+
+    .hero {
+      background: linear-gradient(135deg, var(--dark) 0%, var(--mid) 60%, #1a3a4a 100%);
+      color: white;
+      padding: 100px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(200,168,75,0.15), transparent 70%);
+    }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; }
+    .hero .tagline { color: var(--gold); font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase; }
+    .hero p { color: #aac; max-width: 600px; }
+    .btn-gold { background: var(--gold); color: var(--dark); font-weight: 600; border: none; padding: 12px 32px; border-radius: 4px; }
+    .btn-gold:hover { background: #e0bc5a; color: var(--dark); }
+    .btn-outline-gold { border: 2px solid var(--gold); color: var(--gold); padding: 11px 30px; border-radius: 4px; background: transparent; }
+    .btn-outline-gold:hover { background: var(--gold); color: var(--dark); }
+
+    .section-title { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--dark); }
+    .accent-line { width: 60px; height: 4px; background: var(--gold); margin-bottom: 2rem; }
+    .about-card { background: white; border-left: 4px solid var(--gold); padding: 2rem; border-radius: 0 8px 8px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+
+    #resume { background: white; }
+    .resume-section-title { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--gold); border-bottom: 2px solid var(--gold); padding-bottom: 8px; margin-bottom: 1.5rem; }
+    .resume-item { margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid #eee; }
+    .resume-item:last-child { border-bottom: none; }
+    .resume-item h5 { font-weight: 600; color: var(--dark); margin-bottom: 2px; }
+    .resume-item .meta { color: var(--gold); font-size: 0.9rem; font-weight: 600; }
+    .resume-item .org { color: #666; font-size: 0.9rem; }
+    .skill-badge { background: var(--dark); color: var(--gold); padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; display: inline-block; margin: 4px; }
+
+    .project-card { background: white; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.07); overflow: hidden; height: 100%; transition: transform 0.2s; }
+    .project-card:hover { transform: translateY(-4px); }
+    .project-card .card-header { background: var(--dark); color: var(--gold); font-family: 'Playfair Display', serif; font-size: 1.2rem; padding: 1.2rem 1.5rem; }
+    .project-card .card-body { padding: 1.5rem; }
+
+    footer { background: var(--dark); color: #aab; padding: 40px 0; }
+    footer a { color: var(--gold); text-decoration: none; }
+    .social-icon { font-size: 1.5rem; color: #aab; margin: 0 10px; transition: color 0.2s; }
+    .social-icon:hover { color: var(--gold); }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Luke Oliver</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#resume">Résumé</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <p class="tagline mb-2"><i class="bi bi-buildings me-2"></i>Pre-Business · BYU · Finance & Entrepreneurship</p>
+    <h1 class="mb-3">Hello, I'm<br/>Luke Oliver</h1>
+    <p class="mb-4">Pre-Business student at Brigham Young University. Two-time FBLA National competitor, business plan builder, and future Spanish speaker heading to Argentina in May 2026.</p>
+    <a href="#resume" class="btn btn-gold me-3">View Résumé</a>
+    <a href="scratch.html" class="btn btn-outline-gold">Explore My Project</a>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="py-5">
+  <div class="container py-4">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5">
+        <p class="text-uppercase text-muted fw-semibold mb-1" style="letter-spacing:2px">Who I Am</p>
+        <h2 class="section-title">About Me</h2>
+        <div class="accent-line"></div>
+        <div class="about-card">
+          <p>I'm Luke Oliver, a Pre-Business student at BYU with a strong foundation in finance, entrepreneurship, and business strategy — built through real competition and hands-on work experience.</p>
+          <p>I competed twice at the FBLA National level in finance events, developed multiple full business plans, and am preparing for a mission to Argentina where I will become fluent in Spanish.</p>
+          <p class="mb-0">I built <strong>ConstructAI</strong> as a practical capital budgeting tool for construction professionals, combining my finance knowledge with newly developed web skills.</p>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="row g-3 text-center">
+          <div class="col-6">
+            <div class="p-4 rounded" style="background:white; box-shadow: 0 4px 20px rgba(0,0,0,0.07);">
+              <i class="bi bi-trophy fs-1" style="color:var(--gold)"></i>
+              <p class="fw-semibold mt-2 mb-0">FBLA Nationals</p>
+              <small class="text-muted">2022 & 2023 · Finance</small>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="p-4 rounded" style="background:white; box-shadow: 0 4px 20px rgba(0,0,0,0.07);">
+              <i class="bi bi-calculator fs-1" style="color:var(--gold)"></i>
+              <p class="fw-semibold mt-2 mb-0">Capital Budgeting</p>
+              <small class="text-muted">NPV · IRR · MIRR · Payback</small>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="p-4 rounded" style="background:white; box-shadow: 0 4px 20px rgba(0,0,0,0.07);">
+              <i class="bi bi-translate fs-1" style="color:var(--gold)"></i>
+              <p class="fw-semibold mt-2 mb-0">Spanish</p>
+              <small class="text-muted">Mission to Argentina · 2026</small>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="p-4 rounded" style="background:white; box-shadow: 0 4px 20px rgba(0,0,0,0.07);">
+              <i class="bi bi-file-earmark-text fs-1" style="color:var(--gold)"></i>
+              <p class="fw-semibold mt-2 mb-0">Business Plans</p>
+              <small class="text-muted">Multiple Completed Plans</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Resume -->
+<section id="resume" class="py-5">
+  <div class="container py-4">
+    <p class="text-uppercase text-muted fw-semibold mb-1" style="letter-spacing:2px">My Background</p>
+    <h2 class="section-title">Résumé</h2>
+    <div class="accent-line"></div>
+
+    <div class="row g-4">
+      <!-- Left column -->
+      <div class="col-lg-6">
+        <h3 class="resume-section-title"><i class="bi bi-mortarboard me-2"></i>Education</h3>
+        <div class="resume-item">
+          <h5>Pre-Business</h5>
+          <p class="meta">2025 – Present</p>
+          <p class="org">Brigham Young University · Provo, UT</p>
+          <ul class="text-muted small">
+            <li>Emphasis in Finance and Business Strategy</li>
+            <li>Member, International Business Club (IB Club)</li>
+            <li>Coursework: Financial Management, Statistics, Economics, Web Development</li>
+          </ul>
+        </div>
+        <div class="resume-item">
+          <h5>High School Diploma</h5>
+          <p class="meta">Graduated 2025</p>
+          <p class="org">Grandview High School · Colorado</p>
+          <ul class="text-muted small">
+            <li>ACT Score: 32</li>
+            <li>FBLA Chapter Member & Two-Time National Competitor</li>
+          </ul>
+        </div>
+
+        <h3 class="resume-section-title mt-4"><i class="bi bi-award me-2"></i>Honors & Awards</h3>
+        <div class="resume-item">
+          <h5>FBLA National Competitor — Finance</h5>
+          <p class="meta">2022 & 2023</p>
+          <p class="org">Future Business Leaders of America · National Conference</p>
+          <ul class="text-muted small">
+            <li>Competed in finance events at the national level two consecutive years</li>
+            <li>Delivered public presentations to panels of business industry judges</li>
+          </ul>
+        </div>
+        <div class="resume-item">
+          <h5>Business Plan Developer</h5>
+          <p class="meta">2022 – Present</p>
+          <p class="org mb-0">Developed multiple complete business plans including financial projections, market analysis, and operational strategy across various industries</p>
+        </div>
+
+        <h3 class="resume-section-title mt-4"><i class="bi bi-globe-americas me-2"></i>Additional</h3>
+        <div class="resume-item">
+          <h5>Missionary — Argentina</h5>
+          <p class="meta">Departing May 27, 2026</p>
+          <p class="org mb-0">The Church of Jesus Christ of Latter-day Saints · Buenos Aires, Argentina · Full-time service, Spanish immersion</p>
+        </div>
+        <div class="resume-item">
+          <h5>International Business Club</h5>
+          <p class="meta">2025 – Present</p>
+          <p class="org mb-0">BYU · Provo, UT</p>
+        </div>
+      </div>
+
+      <!-- Right column -->
+      <div class="col-lg-6">
+        <h3 class="resume-section-title"><i class="bi bi-briefcase me-2"></i>Work Experience</h3>
+        <div class="resume-item">
+          <h5>Barista</h5>
+          <p class="meta">2023 – 2025 · 2 Years</p>
+          <p class="org">Berry Blendz · Colorado</p>
+          <ul class="text-muted small">
+            <li>Prepared smoothies, juices, and blended beverages in a fast-paced environment</li>
+            <li>Delivered consistent, high-quality customer service and built repeat clientele</li>
+            <li>Handled cash transactions and point-of-sale systems accurately</li>
+          </ul>
+        </div>
+        <div class="resume-item">
+          <h5>Golf Course Staff</h5>
+          <p class="meta">2021 · 6 Months</p>
+          <p class="org">Black Bear Golf Course · Colorado</p>
+          <ul class="text-muted small">
+            <li>Assisted guests and maintained smooth course operations</li>
+            <li>Provided excellent customer service in an outdoor recreational setting</li>
+          </ul>
+        </div>
+
+        <h3 class="resume-section-title mt-4"><i class="bi bi-tools me-2"></i>Skills</h3>
+        <div>
+          <span class="skill-badge">Microsoft Excel</span>
+          <span class="skill-badge">Financial Modeling</span>
+          <span class="skill-badge">Business Plan Writing</span>
+          <span class="skill-badge">Public Speaking</span>
+          <span class="skill-badge">Capital Budgeting</span>
+          <span class="skill-badge">Spanish (In Progress)</span>
+          <span class="skill-badge">Customer Service</span>
+          <span class="skill-badge">HTML & CSS</span>
+          <span class="skill-badge">JavaScript</span>
+          <span class="skill-badge">Data Analysis</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="py-5" style="background:#f8f6f1">
+  <div class="container py-4">
+    <p class="text-uppercase text-muted fw-semibold mb-1" style="letter-spacing:2px">What I've Built</p>
+    <h2 class="section-title">Projects</h2>
+    <div class="accent-line"></div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+          <div class="card-header"><i class="bi bi-calculator me-2"></i>ConstructAI Calculator</div>
+          <div class="card-body">
+            <p class="text-muted">An AI-powered capital budgeting calculator for construction companies evaluating major purchases. Computes NPV, IRR, MIRR, and Payback Period with intelligent AI recommendations.</p>
+            <a href="app.html" class="btn btn-gold btn-sm">Launch App</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+          <div class="card-header"><i class="bi bi-file-earmark-bar-graph me-2"></i>Construction Finance Guide</div>
+          <div class="card-body">
+            <p class="text-muted">A from-scratch web page explaining capital budgeting for construction decision-makers, featuring an interactive Tableau visualization and YouTube explainer video.</p>
+            <a href="scratch.html" class="btn btn-gold btn-sm">View Page</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+          <div class="card-header"><i class="bi bi-file-text me-2"></i>FBLA Business Plans</div>
+          <div class="card-body">
+            <p class="text-muted">Developed multiple full business plans for FBLA national competitions — including financial projections, market analysis, and operational strategy with public presentations.</p>
+            <span class="badge bg-secondary">Competition Work</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-5">
+  <div class="container py-4 text-center">
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="accent-line mx-auto"></div>
+    <p class="text-muted mb-4">Interested in finance, business, or collaboration? Reach out.</p>
+    <div class="mb-3">
+      <a href="app.html" class="btn btn-gold me-3"><i class="bi bi-calculator me-2"></i>Try the Calculator</a>
+      <a href="scratch.html" class="btn btn-outline-gold"><i class="bi bi-book me-2"></i>Finance Guide</a>
+    </div>
+    <div class="mt-4">
+      <a href="https://linkedin.com" target="_blank" class="social-icon"><i class="bi bi-linkedin"></i></a>
+      <a href="https://github.com/loliver878-tech" target="_blank" class="social-icon"><i class="bi bi-github"></i></a>
+      <a href="https://twitter.com" target="_blank" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container text-center">
+    <p class="mb-1" style="font-family:'Playfair Display',serif; color:var(--gold); font-size:1.3rem">Luke Oliver</p>
+    <p class="small mb-0">© 2026 Luke Oliver · Pre-Business · BYU · Built with HTML, CSS & Bootstrap</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

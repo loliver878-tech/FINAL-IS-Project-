@@ -1,0 +1,331 @@
+/* ConstructAI - Custom Stylesheet for Scratch Page */
+
+/* ===== CSS Variables ===== */
+:root {
+  --steel: #1c2b3a;
+  --gold: #C8A84B;
+  --concrete: #e8e4dc;
+  --rust: #8B3A2A;
+  --white: #ffffff;
+  --text-dark: #0f1923;
+  --text-muted: #5a6a7a;
+}
+
+/* ===== Body & Base ===== */
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background-color: #d6d0c4;
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 40px,
+      rgba(0,0,0,0.03) 40px,
+      rgba(0,0,0,0.03) 41px
+    );
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Navigation ===== */
+.site-nav {
+  background-color: var(--steel);
+  padding: 16px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
+.site-nav .brand {
+  font-family: 'Georgia', serif;
+  font-size: 1.4rem;
+  color: var(--gold);
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.site-nav a {
+  color: #ccc;
+  text-decoration: none;
+  margin-left: 28px;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.site-nav a:hover {
+  color: var(--gold);
+}
+
+/* ===== Hero Banner ===== */
+.hero-banner {
+  background: linear-gradient(135deg, var(--steel) 0%, #2a3f52 50%, #0f1923 100%);
+  color: white;
+  text-align: center;
+  padding: 80px 40px 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(200,168,75,0.04) 10px,
+      rgba(200,168,75,0.04) 11px
+    );
+}
+
+.hero-banner h1 {
+  font-family: 'Georgia', serif;
+  font-size: 3rem;
+  color: var(--gold);
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.hero-banner p {
+  font-size: 1.2rem;
+  color: #aac;
+  max-width: 600px;
+  margin: 0 auto 24px;
+  position: relative;
+}
+
+/* ===== Section Divs (positioning & styling blocks) ===== */
+
+/* Div 1: Content Section Block */
+.content-section {
+  max-width: 960px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  overflow: hidden;
+}
+
+.content-section .section-header {
+  background: var(--steel);
+  color: var(--gold);
+  padding: 20px 36px;
+  font-family: 'Georgia', serif;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+.content-section .section-body {
+  padding: 36px;
+}
+
+/* Div 2: Two-Column Layout Block */
+.two-col-block {
+  max-width: 960px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.two-col-block .col-card {
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.09);
+  padding: 28px;
+  border-top: 4px solid var(--gold);
+}
+
+/* Div 3: Full-Width Highlight Block */
+.highlight-block {
+  background: var(--steel);
+  color: white;
+  padding: 50px 40px;
+  text-align: center;
+  margin: 50px 0;
+}
+
+.highlight-block h2 {
+  font-family: 'Georgia', serif;
+  color: var(--gold);
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+/* Div 4: Media / Embed Block */
+.media-block {
+  max-width: 960px;
+  margin: 40px auto;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  padding: 36px;
+}
+
+.media-block h3 {
+  font-family: 'Georgia', serif;
+  color: var(--steel);
+  border-left: 4px solid var(--gold);
+  padding-left: 16px;
+  margin-bottom: 20px;
+}
+
+/* ===== Typography ===== */
+h2 {
+  font-family: 'Georgia', serif;
+  color: var(--steel);
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-family: 'Georgia', serif;
+  color: var(--steel);
+  font-size: 1.3rem;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  line-height: 1.8;
+}
+
+/* ===== Lists ===== */
+ol.main-list {
+  font-family: Arial, sans-serif;
+  color: var(--text-dark);
+  line-height: 2;
+  padding-left: 20px;
+}
+
+ol.main-list li {
+  font-weight: 600;
+  color: var(--steel);
+  margin-bottom: 8px;
+}
+
+ul.sub-list {
+  font-family: Arial, sans-serif;
+  color: var(--text-muted);
+  font-weight: 400;
+  line-height: 1.9;
+  margin-top: 4px;
+}
+
+ul.sub-list li::marker {
+  color: var(--gold);
+}
+
+/* ===== Image styles ===== */
+.section-image {
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  margin: 20px 0;
+}
+
+.image-caption {
+  font-family: Arial, sans-serif;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: -12px;
+  margin-bottom: 20px;
+}
+
+/* ===== Metric Cards ===== */
+.metric-card {
+  background: var(--concrete);
+  border-left: 4px solid var(--gold);
+  border-radius: 0 4px 4px 0;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+}
+
+.metric-card h4 {
+  font-family: 'Georgia', serif;
+  color: var(--steel);
+  margin-bottom: 4px;
+  font-size: 1rem;
+}
+
+.metric-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* ===== Anchor / Jump Links ===== */
+.anchor-nav {
+  background: var(--concrete);
+  padding: 16px 36px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  border-bottom: 2px solid var(--gold);
+}
+
+.anchor-nav a {
+  font-family: Arial, sans-serif;
+  font-size: 0.85rem;
+  color: var(--steel);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.anchor-nav a:hover {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  background: var(--steel);
+  color: #aab;
+  text-align: center;
+  padding: 30px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 0.85rem;
+  margin-top: 60px;
+}
+
+.site-footer a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+/* ===== Tableau embed wrapper ===== */
+.tableau-wrapper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .two-col-block {
+    grid-template-columns: 1fr;
+  }
+  .hero-banner h1 {
+    font-size: 2rem;
+  }
+  .site-nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
